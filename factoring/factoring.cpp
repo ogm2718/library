@@ -1,4 +1,4 @@
-vector<long long> facttoring(long long p){
+vector<long long> factoring(long long p){
   vector<long long> fact(p,0);
   for(i=2;i*i<=p;i++){
     while(p%i==0){
