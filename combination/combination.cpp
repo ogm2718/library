@@ -3,7 +3,7 @@
 using namespace std;
 
 long long MOD = 1e9 +7;
-
+long long factrial[10000000];
 long long Repeat(long long a,long long cnt){
   if(cnt==0)return 1LL;
   if(cnt%2==1){
@@ -18,7 +18,8 @@ long long Repeat(long long a,long long cnt){
 
 long long fact(long long a){
   if(a == 0)return 1LL;
-  else return (a*fact(a-1))%MOD;
+  else if(factrial[a]!=0)return factrial[a];
+  else return factrial[a] = (a*fact(a-1))%MOD;
 }
 
 long long conb(long long a, long long b){
