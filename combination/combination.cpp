@@ -22,7 +22,7 @@ long long fact(long long a){
   else return factrial[a] = (a*fact(a-1))%MOD;
 }
 
-long long conb(long long a, long long b){
+long long comb(long long a, long long b){
   long long fa,fb,fab;
   fa = fact(a);
   fb = fact(b);

@@ -1,14 +1,13 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-#include <string>
-#include <map>
-#include <utility>
-typedef long long ll;
+#include <bits/stdc++.h>
+
 using namespace std;
 
-int main(){
-  ll i,j,k;
-  string s;
-  return 0;
+using ll = long long;
+const ll MOD = 1e9 + 7;
+const ll INF = 1e18;
+
+int main() {
+    ll n, m, i, j, k;
+
+    return 0;
 }
