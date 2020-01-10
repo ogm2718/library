@@ -1,11 +1,8 @@
-#include <iostream>
-
-using namespace std;
-
-int gcd(int x, int y){
+template<typename T>
+T gcd(T x, T y){
   return x ? gcd(y%x,x) : y;
 }
-
-int lcm(int x,int y){
+template<typename T>
+T lcm(T x,T y){
   return x*y/gcd(x,y);
 }
