@@ -4,5 +4,5 @@ T gcd(T x, T y){
 }
 template<typename T>
 T lcm(T x,T y){
-  return x*y/gcd(x,y);
+  return x/gcd(x,y)*y;
 }
