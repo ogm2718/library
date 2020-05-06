@@ -39,7 +39,7 @@ bool operator==(const P &p, const P &q) {
 
 Real dot(const P &a, const P &b) {
     // ベクトル a,b の内積
-    return (a.real() * b.real() + a.imag() + b.imag());
+    return (a.real() * b.real() + a.imag() * b.imag());
 }
 
 Real cross(const P &a, const P &b) {
@@ -122,3 +122,13 @@ bool intersect(const Segment &s, const Segment &t) {
     // 線分同士の交差判定
     return ccw(s.a, s.b, t.a) * ccw(s.a, s.b, t.b) <= 0 && ccw(t.a, t.b, s.a) * ccw(t.a, t.b, s.b) <= 0;
 }
+
+P projection(const Line &s, const P &p) {
+    Real t = dot(s.b - s.a, p - s.a) / norm(s.a - s.b);
+    return s.a + (s.b - s.a) * t;
+}
+
+P projection(const Segment &s, const P &p){
+    return projection((Line)s,p);
+}
+
