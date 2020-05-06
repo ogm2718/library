@@ -132,3 +132,10 @@ P projection(const Segment &s, const P &p){
     return projection((Line)s,p);
 }
 
+P refrection(const Line &s, const P &p) {
+    return (projection(s, p) - p) * 2.0 + p;
+}
+
+P refrection(const Segment &s, const P &p) {
+    return refrection((Line)s,p);
+}
