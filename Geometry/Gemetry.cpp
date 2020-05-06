@@ -14,6 +14,11 @@ int sgn(const Real a) {
 inline bool EQ(Real a, Real b) {
     return (abs(a - b) < EPS);
 }
+
+inline Real Get_Value(Real a) {
+    return (EQ(a, 0) ? 0 : a);
+}
+
 istream &operator>>(istream &is, P &p) {
     Real a, b;
     is >> a >> b;
@@ -21,7 +26,7 @@ istream &operator>>(istream &is, P &p) {
     return is;
 }
 ostream &operator<<(ostream &os, P &p) {
-    return os << fixed << setprecision(12) << p.real() << " " << p.imag();
+    return os << fixed << setprecision(12) << Get_Value(p.real()) << " " << Get_Value(p.imag());
 }
 
 P operator*(const P &p, const Real &d) {
