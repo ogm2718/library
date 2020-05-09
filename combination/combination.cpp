@@ -3,7 +3,13 @@
 using namespace std;
 
 long long MOD = 1e9 +7;
-long long factrial[10000000];
+long long factrial[5000000]; //再帰が深くなるとスタックオーバーフローになるので最初に使うものは初期化しておく
+
+long long init(){
+  factrial[0]=1;
+  for(i=1;i<5000000;i++)factrial[i] = (factrial[i-1] * i) % MOD;
+}
+
 long long Repeat(long long a,long long cnt){
   if(cnt==0)return 1LL;
   if(cnt%2==1){
