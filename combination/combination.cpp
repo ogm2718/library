@@ -7,7 +7,7 @@ long long factrial[5000000]; //再帰が深くなるとスタックオーバー�
 
 long long init(){
   factrial[0]=1;
-  for(i=1;i<5000000;i++)factrial[i] = (factrial[i-1] * i) % MOD;
+  for(int i=1;i<5000000;i++)factrial[i] = (factrial[i-1] * i) % MOD;
 }
 
 long long Repeat(long long a,long long cnt){
